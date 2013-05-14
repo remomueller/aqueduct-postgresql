@@ -2,7 +2,8 @@
 
 ### Enhancements
 - **Gem Changes**
-  - Updated to Rails 4.0.0.beta1
+  - Updated to Rails 4.0.0.rc1
+  - Updated to pg 0.15.1
 
 ## 0.1.0
 
