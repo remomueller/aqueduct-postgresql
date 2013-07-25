@@ -112,7 +112,7 @@ module Aqueduct
             column_found = columns.include?(column)
 
             if not column_found
-              result += " <i>#{column}</i> does not exist in <i>#{@source.database}.#{table}</i>"
+              error += " <i>#{column}</i> does not exist in <i>#{@source.database}.#{table}</i>"
             else
               results = db_connection.exec("SELECT CAST(\"#{column}\" AS text) FROM \"#{table}\";")
               values = results.collect{|r| r[column.to_s]}
