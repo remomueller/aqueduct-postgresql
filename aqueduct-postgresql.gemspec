@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails',     '~> 4.0.0'
   s.add_dependency 'aqueduct',  '~> 0.2.0'
-  s.add_dependency 'pg',        '~> 0.15.1'
+  s.add_dependency 'pg',        '~> 0.16.0'
 
   s.add_development_dependency 'sqlite3'
 end
