@@ -35,7 +35,7 @@ module Aqueduct
           db_connection = PG.connect( host: @source.host, user: @source.username, password: @source.password, dbname: @source.database, port: @source.port )
           status = db_connection.status
         rescue PG::Error => e
-          error = "#{e.errno}: #{e.error}"
+          error = "#{e.error}"
         ensure
           result = true if status == 0
           db_connection.finish if db_connection
@@ -60,7 +60,7 @@ module Aqueduct
             end
           end
         rescue PG::Error => e
-          error = "#{e.errno}: #{e.error}"
+          error = "#{e.error}"
         ensure
           db_connection.finish if db_connection
         end
@@ -77,7 +77,7 @@ module Aqueduct
             tables = results.collect{|r| r["table_name"]}
           end
         rescue PG::Error => e
-          error = "#{e.errno}: #{e.error}"
+          error = "#{e.error}"
         ensure
           db_connection.finish if db_connection
         end
@@ -119,7 +119,7 @@ module Aqueduct
             end
           end
         rescue PG::Error => e
-          error = "#{e.errno}: #{e.error}"
+          error = "#{e.error}"
         ensure
           if db_connection
             db_connection.finish
